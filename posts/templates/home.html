@@ -9,20 +9,16 @@
     <title>Document</title>
 </head>
 <body>
-    {% if nome == 'groger' %}
-        <h1>Bem-vindx ao Blog, {{nome}} :(((((</h1>
-    {% elif nome == 'batatinha' %}
-        <h2>XABLAU</h2>
-    {% else %}
-        <p>Bem-vindx ao Blog, {{nome}} :)))))</p>    
-    {% endif %}
+    <nav>
+        <a href="/">Home</a>
+        <a href="/post">Post</a>
+        <a href="/cadastro">Cadastro</a>
+        <a href="#">Login</a>
+    </nav>
+    
+    {% block content %}
 
-    <ul>
-    {% for item in lista %}
-        <li>{{item}}</li>
-    {% endfor %}
-    </ul>
+    {% endblock %}
 
-    <img src="{% static 'images/gatinhos.jpg' %}" alt="">
 </body>
 </html>
